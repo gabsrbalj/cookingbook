@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add">
+
+    <!-- Recipe Name EditText -->
+
+    <!-- Recipe Description EditText -->
+
+    <!-- Ingredient EditText -->
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Name of the recipe"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.259" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:hint="Describe here how to do it..."
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <EditText
+        android:id="@+id/etIngredient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter new ingredient"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreateNew"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddIngredient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <!-- Add Ingredient Button -->
+    <Button
+        android:id="@+id/btnAddIngredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Ingredient"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="@+id/etIngredient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etIngredient"
+        app:layout_constraintTop_toTopOf="@+id/etIngredient" />
+
+    <!-- Choose Image Button -->
+    <Button
+        android:id="@+id/btnChooseImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Image"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/green"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreateNew"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddIngredient"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Recipe ImageView -->
+
+    <!-- Create New Button -->
+
+    <ImageView
+        android:id="@+id/ivRecipeImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="Recipe Image"
+        app:layout_constraintBottom_toTopOf="@+id/etIngredient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <Button
+        android:id="@+id/btnCreateNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POST"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription"
+        app:layout_constraintVertical_bias="0.704"
+        android:backgroundTint="@color/green"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
